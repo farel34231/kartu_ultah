@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ulang Tahun</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1s;
+            max-width: 400px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #ff6b6b;
+            margin: 10px 0;
+        }
+        p {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #ff3b3b;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="adadeh.jpeg" alt="Selamat Ulang Tahun">
+        <h1>Selamat Ulang Tahun Maulidiyah!</h1>
+        <p>Semoga hari istimewa ini dipenuhi dengan kebahagiaan,diberi kemudahan dan semoga bisa mendapatkan diki</p>
+        <button onclick="showMessage()">Kirim Ucapan</button>
+    </div>
+
+    <audio id="birthdayMusic" src="hbd.mp3" loop></audio>
+
+    <script>
+        // Memainkan musik saat halaman dibuka
+        window.onload = function() {
+            document.getElementById('birthdayMusic').play();
+        };
+
+        function showMessage() {
+            alert("Selamat ulang tahun!dan semangat terus rusher terbaik,untuk mendapatkan kawan gw!");
+        }
+    </script>
+
+</body>
+</html>
